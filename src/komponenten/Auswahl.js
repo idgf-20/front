@@ -29,14 +29,14 @@ const Auswahl = () => {
   
 
   const fetchTimetable = (userId) => {
-    fetch(`http://localhost:3000/api/timetable?userId=${userId}`)
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable?userId=${userId}`)
       .then((response) => response.json())
       .then((data) => setTimetable(data))
       .catch((error) => console.error('Fehler beim Laden des Stundenplans:', error));
   };
 
   const fetchCourseColors = (userId) => {
-    fetch(`http://localhost:3000/api/courseColors?userId=${userId}`)
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/courseColors?userId=${userId}`)
       .then((response) => response.json())
       .then((data) => setCourseColors(data))
       .catch((error) => console.error('Fehler beim Laden der Farben:', error));
@@ -49,7 +49,7 @@ const Auswahl = () => {
       [course]: color,
     }));
   
-    fetch('http://localhost:3000/api/courseColor', {
+    fetch('${process.env.REACT_APP_API_BASE_URL}/api/courseColor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, course, color }),
@@ -68,7 +68,7 @@ const Auswahl = () => {
     setTimetable((prevTimetable) => prevTimetable.filter((entry) => entry.id !== id));
 
     // Dann die Löschanfrage an den Server senden
-    fetch(`http://localhost:3000/api/timetable/${id}`, {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable/${id}`, {
       method: 'DELETE',
     })
       .then((response) => {
