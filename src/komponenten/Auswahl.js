@@ -49,7 +49,7 @@ const Auswahl = () => {
       [course]: color,
     }));
   
-    fetch('${http://localhost:3000/api/courseColor', {
+    fetch('http://localhost:3000/api/courseColor', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, course, color }),
