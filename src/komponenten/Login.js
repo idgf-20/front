@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('3.125.183.140/api/login', {
+      const response = await fetch('https://apis-1u1x.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
