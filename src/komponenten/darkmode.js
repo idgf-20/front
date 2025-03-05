@@ -30,10 +30,7 @@ export function setupDarkMode() {
         localStorage.setItem('mode', 'light');
     }
 
-    const darkModeStyle = {
-        background: "radial-gradient(#412121, #000) no-repeat, url('/starts.png')",
-        backgroundSize: "cover"
-    };
+
     
     
 }

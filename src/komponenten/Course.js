@@ -49,9 +49,7 @@ const Courses = () => {
     navigate('/fileUpload');
   }
 
-  const redirectToMeineFaecher = () => {
-    navigate('/meine-faecher');
-  };
+
 
   const redirectToPraktikum = () => {
     navigate('/praktikum');
