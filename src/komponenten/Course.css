@@ -1,0 +1,38 @@
+.courses-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.courses-table th {
+  background-color: #37474f;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.courses-table td {
+  background-color: #ffffff;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.courses-table td:hover {
+  background-color: #f0f4f7;
+}

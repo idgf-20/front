@@ -1,0 +1,191 @@
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f4f8;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 30px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Überschrift */
+.file-upload-container h2 {
+  margin-bottom: 25px;
+  color: #3e4c59;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Versteckte Dateieingabe */
+.file-upload-container input[type="file"] {
+  display: none;
+}
+
+/* Dateiauswahl-Label */
+.file-upload-container label {
+  background-color: #ea454c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-container label:hover {
+  background-color: #c63a41;
+}
+
+/* Datei-Menü */
+.file-upload-container .file-menu {
+  margin: 20px 0;
+  text-align: center; 
+}
+
+.file-upload-container .file-menu label {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+/* Style für das Dropdown-Menü */
+.file-upload-container select {
+  padding: 12px 15px; 
+  border-radius: 6px; 
+  font-size: 1em;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc; 
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto; 
+  transition: border-color 0.3s ease; 
+}
+
+/* Dropdown Hover Effect */
+.file-upload-container select:hover {
+  border-color: #ea454c; 
+}
+
+/* Dateidetails */
+.file-upload-container .file-details {
+  margin: 20px 0;
+  color: #555;
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+.file-upload-container button {
+  background-color: #ea454c;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.file-upload-container button:hover {
+  background-color: #c63a41;
+}
+
+/* Nachricht */
+.file-upload-container p {
+  margin-top: 25px;
+  color: #666;
+  font-size: 1em;
+}
+
+.course-list {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.course-list h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+.course-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.course-list li:hover {
+  background-color: #f2dede;
+}
+
+.course-list li label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-list li input[type="checkbox"] {
+  margin-right: -140px;
+  cursor: pointer;
+}
+
+.course-list li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hervorhebung der Kurse */
+.courses {
+  background-color: #f2dede;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.semester-selection {
+  margin: 20px 0; 
+  text-align: center; 
+}
+
+.semester-selection label {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+
+.file-upload-container select {
+  padding: 12px 15px;
+  border-radius: 6px; 
+  font-size: 1em;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc; 
+  width: 100%;
+  max-width: 300px; 
+  margin: 0 auto; 
+  transition: border-color 0.3s ease; 
+}
+
+.file-upload-container select:hover {
+  border-color: #ea454c; 
+}
+
+
+

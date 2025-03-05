@@ -1,0 +1,75 @@
+body.dark-mode {
+    background-color: #1e1e30; /* Black background */
+    color: #f0f0f0;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode th {
+    color: #ffffff;
+}
+
+body.dark-mode td {
+    background-color: #1e1e30; /* Black background */
+    color: #b25a5a;
+}
+
+body.dark-mode .file-upload-container,
+body.dark-mode .sidebar,
+body.dark-mode #mainAuswahl,
+body.dark-mode #praktikum-container {
+    background-color: #1e1e30; /* Black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode button, 
+body.dark-mode .delete-button, 
+body.dark-mode .toggle-delete-button {
+    background-color: #503030;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover, 
+body.dark-mode .delete-button:hover, 
+body.dark-mode .toggle-delete-button:hover {
+    background-color: #1e1e30; /* Black background on hover */
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1e1e30; /* Black background */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #1e1e30; /* Black background on hover */
+    transform: scale(1.1);
+}
+
+/* Burger-Menü im Dark-Mode */
+body.dark-mode .burger-menu .bar {
+    background-color: #ffffff; 
+}
+
+/* Animation oder Hover (optional) */
+body.dark-mode .burger-menu .bar:hover {
+    background-color: #cccccc; 
+}
+
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.burger-menu .bar {
+    transition: background-color 0.3s ease;
+}

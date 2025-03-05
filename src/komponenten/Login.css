@@ -1,0 +1,277 @@
+/* ---------- Common Styles ---------- */
+.login-page {
+  display: flex;
+  height: 100vh; 
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Light Mode (Default) Styles ---------- */
+
+/* Left Side */
+.login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle1, .circle2, .circle3 {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(233, 69, 76, 0.3);
+  z-index: 0;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  top: -50px;
+  left: -50px;
+}
+
+.circle2 {
+  width: 180px;
+  height: 180px;
+  bottom: 100px;
+  right: -50px;
+  background-color: rgba(233, 69, 76, 0.2);
+}
+
+.circle3 {
+  width: 120px;
+  height: 120px;
+  top: 200px;
+  left: 100px;
+  background-color: rgba(233, 69, 76, 0.4);
+}
+
+/* SVG Wave */
+.login-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 1440 320%22%3E%3Cpath fill%3D%22%231e1e30%22 fill-opacity%3D%221%22 d%3D%22M0%2C192L60%2C186.7C120%2C181%2C240%2C171%2C360%2C160C480%2C149%2C600%2C139%2C720%2C122.7C840%2C107%2C960%2C85%2C1080%2C101.3C1200%2C117%2C1320%2C171%2C1380%2C197.3L1440%2C224L1440%2C320L1380%2C320C1320%2C320%2C1200%2C320%2C1080%2C320C960%2C320%2C840%2C320%2C720%2C320C600%2C320%2C480%2C320%2C360%2C320C240%2C320%2C120%2C320%2C60%2C320L0%2C320Z%22%3E%3C/path%3E%3C/svg%3E');
+  background-size: cover;
+  z-index: 2;
+}
+
+.spm-logo {
+  width: 130px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.spm-logo:hover {
+  transform: scale(1.1);
+}
+
+.neon-glow {
+  filter: drop-shadow(0px 0px 20px #ff758c);
+}
+
+.login-left h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-left p {
+  color: #333;
+  font-size: 18px;
+  max-width: 300px;
+  opacity: 0.9;
+}
+
+/* Right Side */
+.login-right {
+  flex: 1;
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login-box {
+  width: 350px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.login-box h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.login-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.input-label {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left; 
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.login-box input::placeholder {
+  color: #999;
+}
+
+.login-box input:focus {
+  border-color: #ea454c;
+  outline: none;
+  box-shadow: 0 0 10px #ea454c, 0 0 40px rgba(255, 117, 140, 0.7);
+}
+
+/* Checkbox and Links */
+.remember-forgot {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  color: #333;
+  display: inline-flex; 
+  align-items: center; 
+  font-size: small;
+  margin-bottom: 5px;
+}
+
+.remember-me input {
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+
+.forgot-password {
+  color: #ff758c; 
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ea454c 0%, #ff758c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(234, 69, 76, 0.4), 0 6px 30px rgba(255, 117, 140, 0.5);
+}
+
+.register-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.register-text a {
+  color: #ff758c;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+/* ... (keep your responsive CSS as is) ... */
+
+/* ---------- Dark Mode Overrides ---------- */
+body.dark-mode .login-left {
+  background: linear-gradient(135deg, #ea454c 0%, #ff758c 100%);
+}
+
+body.dark-mode .login-left h2,
+body.dark-mode .login-left p {
+  color: #fff;
+}
+
+body.dark-mode .login-right {
+  background-color: #1e1e30;
+}
+
+body.dark-mode .login-box {
+  background-color: #2a2a3d;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .login-box h2 {
+  color: #fff;
+}
+
+body.dark-mode .login-box p {
+  color: #ddd;
+}
+
+body.dark-mode .input-label {
+  color: #fff;
+}
+
+body.dark-mode .login-box input {
+  background-color: #2a2a3d;
+  color: #bbb;
+  border: 1px solid #555;
+}
+
+body.dark-mode .login-box input::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode .remember-me {
+  color: #e2dada;
+}
+
+body.dark-mode .forgot-password {
+  color: #ff758c;
+}
+
+body.dark-mode .register-text {
+  color: #ddd;
+}
+
+body.dark-mode .register-text a {
+  color: #ff758c;
+}

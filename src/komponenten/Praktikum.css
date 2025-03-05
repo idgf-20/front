@@ -1,0 +1,124 @@
+#praktikum-container {
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Neumorphism Button Style */
+.eintragHinzufügen,.loechenAnzeigen,.inFormularHinzufuegen {
+display: block;
+width: 25%;
+margin: 10px 0; 
+background-color: #37474f; 
+color: white; 
+border: none;
+padding: 15px;
+font-size: 1em;
+border-radius: 12px;
+box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff; /* Neumorphism shadow */
+cursor: pointer;
+text-align: center;
+transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.eintragHinzufügen:hover,.loechenAnzeigen:hover,.inFormularHinzufuegen:hover {
+background-color: #455a64; 
+transform: translateY(-2px); 
+box-shadow: 3px 3px 10px #bebebe, -3px -3px 10px #ffffff; 
+}
+
+
+.praktikum-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+table-layout: fixed;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+th {
+  background-color: #37474f;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  background-color: #ffffff;
+  color: #555;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover td {
+  background-color: #e0f7fa;
+}
+
+.toggle-form-btn {
+  padding: 10px 20px;
+  background-color: #37474f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.toggle-form-btn:hover {
+  background-color: #455a64;
+}
+
+
+.delete {
+  background-color: #ff4d4d;
+  width: 2cm;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05); 
+}
+
+.delete:active {
+  background-color: #d93636; 
+}

@@ -1,0 +1,95 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main Steps Container */
+#mainSteps {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px; 
+  background-color: #f0f4f8; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+}
+
+.button-containerSteps {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+/* Buttons */
+.uploadJsonButton, .weiterButton {
+  padding: 10px 20px;
+  background-color: #ea454c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 250px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.uploadJsonButton:hover, .weiterButton:hover {
+  background-color: #d73c43;
+}
+
+
+/* ---------- Dark Mode Overrides for Steps Page ---------- */
+body.dark-mode {
+  background-color: #121212; /* Dark overall background */
+  color: #fff;
+}
+
+body.dark-mode h2 {
+  color: #fff;
+}
+
+body.dark-mode #mainSteps {
+  background-color: #1e1e30; /* Dark background for the container */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode ol,
+body.dark-mode li {
+  color: #fff; /* Ensure list items and text are light */
+}
+
+body.dark-mode a {
+  color: #ff758c; /* Keep link color or adjust as needed */
+}
+
+body.dark-mode .uploadJsonButton,
+body.dark-mode .weiterButton {
+  background-color: #ea454c; /* You can keep the same button color or adjust */
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .uploadJsonButton:hover,
+body.dark-mode .weiterButton:hover {
+  background-color: #d73c43;
+}
