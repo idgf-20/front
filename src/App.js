@@ -35,7 +35,6 @@ function App() {
           <Route path="/steps" element={<Steps />} />
           <Route path="/auswahl" element={<Auswahl />} />
           <Route path="/fileUpload" element={<FileUpload />} />
-          <Route path="/test" element={<Test />} />
           <Route path="/visualisierung" element={<Visualisierung />} />
           <Route path="/meine-faecher" element={<Course />} />
           <Route path="/Praktikum" element={<Praktikum />} />
