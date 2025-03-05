@@ -3,7 +3,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './komponenten/Header';
 import Footer from './komponenten/Footer';
 import Auswahl from './komponenten/Auswahl';
-import Test from './komponenten/Test';
 import Steps from './komponenten/Steps';
 import Regester from './komponenten/Regester'; 
 import Login from './komponenten/Login';
