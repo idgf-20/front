@@ -31,7 +31,7 @@ const Register = () => {
 
     try {
       // Verwenden des ursprünglichen API-URLs und Logik zum Erstellen des Benutzers
-      const response = await fetch('http://localhost:3000/api/students', {
+      const response = await fetch('${process.env.REACT_APP_API_BASE_URL}/api/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
