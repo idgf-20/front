@@ -33,7 +33,7 @@ const Login = () => {
       if (response.ok) {
         localStorage.setItem('userId', result.userId);
 
-        const timetableResponse = await fetch(`http://localhost:3000/api/timetable?userId=${result.userId}`);
+        const timetableResponse = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable?userId=${result.userId}`);
         const timetable = await timetableResponse.json();
 
         if (timetable.length === 0) {
