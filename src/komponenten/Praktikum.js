@@ -28,7 +28,7 @@ const Praktikum = () => {
 
   const fetchPractikumEntries = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/praktikum/user?student_id=${userId}`);
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/praktikum/user?student_id=${userId}`);
       const data = await response.json();
       setPraktikumEntries(data);
     } catch (error) {
@@ -53,7 +53,7 @@ const Praktikum = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/praktikum', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/praktikum`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const Praktikum = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/praktikum/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/praktikum/${id}`, {
         method: 'DELETE',
       });
 

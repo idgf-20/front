@@ -20,7 +20,7 @@ const FileUpload = () => {
 
   const saveCoursesToDB = async (courseName) => {
     try {
-      const response = await fetch('http://localhost:3000/api/courses', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/courses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ const FileUpload = () => {
       formData.append('userId', userId);
       formData.append('semester', fileSemester);
 
-      fetch('http://localhost:3000/api/upload', {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/api/upload`, {
         method: 'POST',
         body: formData,
       })
