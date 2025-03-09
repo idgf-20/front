@@ -192,12 +192,9 @@ const FileUpload = () => {
         .then((response) => response.json())
         .then((data) => {
           setMessage(`Datei "${fileData.fileName}" erfolgreich hochgeladen!`);
-          const userChoice = window.confirm('Möchtest du noch eine andere Datei hochladen?');
-          if (userChoice) {
-            window.location.reload();
-          } else {
+
             navigate('/auswahl');
-          }
+          
         })
         .catch((error) => {
           setMessage('Hochladen der Datei fehlgeschlagen!');
