@@ -12,9 +12,6 @@ const Steps = () => {
     }
   }, [navigate]);
 
-  const handleRedirect = () => {
-    navigate('/auswahl');
-  };
 
   return (
     <main id='mainSteps'>
