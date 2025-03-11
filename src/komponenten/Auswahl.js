@@ -2,14 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf'; // Importieren der PDF-Bibliothek
 import 'jspdf-autotable'; // Importieren von autoTable
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEyeDropper } from '@fortawesome/free-solid-svg-icons';
 import './Auswahl.css';
 
 const Auswahl = () => {
   const [timetable, setTimetable] = useState([]);
-  const [userId, setUserId] = useState(null);
-  const [courseColors, setCourseColors] = useState({});
   const [menuOpen, setMenuOpen] = useState(false);
   const [showDeleteButtons, setShowDeleteButtons] = useState(false);
   const navigate = useNavigate();
@@ -21,7 +17,6 @@ const Auswahl = () => {
       navigate('/');
       return;
     }
-    setUserId(storedUserId);
     fetchTimetable(storedUserId);
   }, [navigate]);
 
@@ -147,7 +142,7 @@ const Auswahl = () => {
                       style={{
                         padding: '5px',
                         marginBottom: '5px',
-                        backgroundColor: courseColors[entry.kurs] || '#f0f0f0',
+                        backgroundColor: '#f0f0f0',
                         borderRadius: '5px',
                       }}
                     >
