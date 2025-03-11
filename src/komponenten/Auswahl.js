@@ -23,44 +23,10 @@ const Auswahl = () => {
     }
     setUserId(storedUserId);
     fetchTimetable(storedUserId);
-    fetchCourseColors(storedUserId);
   }, [navigate]);
 
   
 
-  const fetchTimetable = (userId) => {
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable?userId=${userId}`)
-      .then((response) => response.json())
-      .then((data) => setTimetable(data))
-      .catch((error) => console.error('Fehler beim Laden des Stundenplans:', error));
-  };
-
-  const fetchCourseColors = (userId) => {
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/courseColors?userId=${userId}`)
-      .then((response) => response.json())
-      .then((data) => setCourseColors(data))
-      .catch((error) => console.error('Fehler beim Laden der Farben:', error));
-  };
-
-  const handleColorChange = (course, color) => {
-    // Update local state for immediate UI feedback
-    setCourseColors((prevColors) => ({
-      ...prevColors,
-      [course]: color,
-    }));
-  
-    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/courseColor`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, course, color }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Optionally re-fetch colors to ensure the state is in sync with the backend
-        fetchCourseColors(userId);
-      })
-      .catch((error) => console.error('Fehler beim Speichern der Farbe:', error));
-  };
   
 
   const handleDeleteEntry = (id) => {
@@ -183,27 +149,8 @@ const Auswahl = () => {
                       </div>
                       <div>{entry.prof}</div>
                       <div>{entry.raum}</div>
-                      {/* Farbauswahl */}
-                      <div className="color-picker-wrapper">
-                        <FontAwesomeIcon
-                          icon={faEyeDropper}
-                          className="color-picker-icon"
-                          onClick={() =>
-                            document.getElementById(`color-picker-${entry.kurs}`).click()
-                          }
-                        />
-                        <span className="color-picker-text">Farbe ändern</span>
-                        <span className="color-picker-tooltip">
-                          Hier klicken, um Farbe zu ändern
-                        </span>
-                        <input
-                          id={`color-picker-${entry.kurs}`}
-                          type="color"
-                          value={courseColors[entry.kurs] || '#f0f0f0'}
-                          onChange={(e) => handleColorChange(entry.kurs, e.target.value)}
-                          className="color-picker-input"
-                        />
-                      </div>
+                      {}
+
                       {showDeleteButtons && (
                         <button
                           className="delete-button"

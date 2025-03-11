@@ -19,7 +19,7 @@ const Steps = () => {
   return (
     <main id='mainSteps'>
       <div>
-        <h2>Schritt für Schritt, wie man einen Zeitplan importiert und in JSON konvertiert.</h2>
+        <h2>Schritt für Schritt: Wie man einen Zeitplan herunterladen.</h2>
         <ol>
           <li>
             Gehen Sie zu <a href="https://wwwccb.hochschule-bochum.de/campusInfo/" target="_blank" rel="noopener noreferrer">campusinfo-Login</a>
@@ -48,7 +48,6 @@ const Steps = () => {
           <li>
             <div className="button-containerSteps">
               <button className="uploadJsonButton" onClick={redirectToTimetable}>HTML-Datei hochladen</button>
-              <button className="weiterButton" onClick={handleRedirect}>Weiter</button>
             </div>
           </li>
         </ol>
