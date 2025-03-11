@@ -27,7 +27,14 @@ const Auswahl = () => {
 
   
 
-  
+  const fetchTimetable = (userId) => {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable?userId=${userId}`)
+      .then((response) => response.json())
+      .then((data) => setTimetable(data))
+      .catch((error) => console.error('Fehler beim Laden des Stundenplans:', error));
+  };
+
+
 
   const handleDeleteEntry = (id) => {
     // Zuerst den Eintrag aus dem Zustand entfernen
