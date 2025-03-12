@@ -62,7 +62,7 @@ const Login = () => {
 
         {/**/}
         <img src={`${process.env.PUBLIC_URL}/logow.png`} alt="SPM Logo" className="spm-logo neon-glow" />
-        <h2>Verwandle deine Ideen in Realität</h2>
+        <h2>Dein Weg zu mehr Struktur im Studium</h2>
         <p>Starte kostenlos und verwalte deinen Stundenplan einfach und effizient.</p>
       </div>
       
@@ -105,7 +105,7 @@ const Login = () => {
             <button type="submit" className="login-btn">Anmelden</button>
 
             <p className="register-text">
-              Noch nicht registriert? <a href="/regester">Konto erstellen</a>
+            Noch kein konto? <a href="/regester">Jetzt regestrieren</a>
             </p>
           </form>
         </div>

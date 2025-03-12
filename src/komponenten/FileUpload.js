@@ -10,7 +10,6 @@ const FileUpload = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  // Redirect to login if user is not logged in
   useEffect(() => {
     const userId = localStorage.getItem('userId');
     if (!userId) {
@@ -41,7 +40,6 @@ const FileUpload = () => {
     }
   };
 
-  // Funktion zum Ersetzen von Umlauten und anderen Sonderzeichen.
   const replaceSpecialCharacters = (text) => {
     console.log('Before replacement:', text);
     const replaced = text
@@ -119,7 +117,6 @@ const FileUpload = () => {
         ? fileCourses.filter((course) => course !== courseName)
         : [...fileCourses, courseName];
 
-      // Speichern den Kurs in der Datenbank, wenn er ausgewählt wird.
       if (!fileCourses.includes(courseName)) {
         saveCoursesToDB(courseName);
       }

@@ -5,13 +5,12 @@ import './Course.css';
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false); // Menüzustand für Sidebar
+  const [menuOpen, setMenuOpen] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
     if (!userId) {
-      // Redirect to login page if the user is not logged in
       navigate('/');
       return;
     }
