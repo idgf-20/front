@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import jsPDF from 'jspdf'; // Importieren der PDF-Bibliothek
-import 'jspdf-autotable'; // Importieren von autoTable
+import jsPDF from 'jspdf'; 
+import 'jspdf-autotable'; 
 import './Auswahl.css';
 
 const Auswahl = () => {
@@ -13,7 +13,6 @@ const Auswahl = () => {
   useEffect(() => {
     const storedUserId = localStorage.getItem('userId');
     if (!storedUserId) {
-      // Redirect to login page if the user is not logged in
       navigate('/');
       return;
     }
@@ -32,10 +31,8 @@ const Auswahl = () => {
 
 
   const handleDeleteEntry = (id) => {
-    // Zuerst den Eintrag aus dem Zustand entfernen
     setTimetable((prevTimetable) => prevTimetable.filter((entry) => entry.id !== id));
 
-    // Dann die Löschanfrage an den Server senden
     fetch(`${process.env.REACT_APP_API_BASE_URL}/api/timetable/${id}`, {
       method: 'DELETE',
     })
@@ -55,24 +52,21 @@ const Auswahl = () => {
 
   const handleDownloadPdf = () => {
     const doc = new jsPDF();
-    doc.setFontSize(20); 
-    doc.text('StudyPlannerManager', 50, 25); 
-    const startY = 50;
+    doc.setFontSize(20);
+    const pageWidth = doc.internal.pageSize.getWidth(); 
+    const text = 'StudyPlanner&Manager';
+    const textWidth = doc.getTextWidth(text);
+    const xPosition = (pageWidth - textWidth) / 2; 
+    doc.text(text, xPosition, 25);
+    
+    const startY = 30; 
   
     const tableColumns = ['Zeit', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag'];
     const tableRows = [];
   
     const timeslots = [
-      '08:00-09:00',
-      '09:00-10:00',
-      '10:00-11:00',
-      '11:00-12:00',
-      '12:00-13:00',
-      '13:00-14:00',
-      '14:00-15:00',
-      '15:00-16:00',
-      '16:00-17:00',
-      '17:00-18:00',
+      '08:00-09:00', '09:00-10:00', '10:00-11:00', '11:00-12:00', '12:00-13:00',
+      '13:00-14:00', '14:00-15:00', '15:00-16:00', '16:00-17:00', '17:00-18:00'
     ];
   
     const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag'];
@@ -80,12 +74,8 @@ const Auswahl = () => {
     timeslots.forEach((time) => {
       const row = [time];
       days.forEach((day) => {
-        const entry = timetable.find(
-          (item) => item.tag === day && item.zeit === time
-        );
-        const cellContent = entry
-          ? `${entry.kurs}\n(${entry.prof})\n${entry.raum}`
-          : '-';
+        const entry = timetable.find((item) => item.tag === day && item.zeit === time);
+        const cellContent = entry ? `${entry.kurs}\n(${entry.prof})\n${entry.raum}` : '-';
         row.push(cellContent);
       });
       tableRows.push(row);
@@ -100,6 +90,9 @@ const Auswahl = () => {
         fontSize: 10,
         cellPadding: 3,
       },
+      headStyles: {
+        fillColor: [234, 69, 76]
+      }
     });
   
     doc.save('Stundenplan.pdf');
